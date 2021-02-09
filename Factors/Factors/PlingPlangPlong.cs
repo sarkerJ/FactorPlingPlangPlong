@@ -8,15 +8,15 @@ namespace Factors
     {
         public static string GetFactorResult(int value)
         {
-            string result = "";
+            StringBuilder result = new StringBuilder();
 
-            if (value % 3 == 0) result += "Pling";
-            if (value % 5 == 0) result += "Plang";
-            if (value % 7 == 0) result += "Plong";
+            if (value % 3 == 0) result.Append("Pling");
+            if (value % 5 == 0) result.Append("Plang");
+            if (value % 7 == 0) result.Append("Plong");
 
-            if (result == "") result += value.ToString();
+            if (result.ToString() == "") result.Append($"{value}");
 
-            return result;
+            return result.ToString();
         }
     }
 }
